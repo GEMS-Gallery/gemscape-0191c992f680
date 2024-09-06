@@ -1,0 +1,38 @@
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+.gemstone-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.gemstone-card:hover {
+  transform: scale(1.05);
+}
+
+.gemstone-card::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #ffd700, #c5a3ff, #4a0e4e);
+  z-index: -1;
+  filter: blur(20px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gemstone-card:hover::before {
+  opacity: 1;
+}
